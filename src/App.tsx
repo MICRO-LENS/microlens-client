@@ -60,13 +60,16 @@ export default function App() {
   if (view === 'contact') return <ContactPage onBack={goHome} />;
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
-      <header className="pl-3 pr-6 pt-10 pb-6">
-        <img src="/microlens_logo.png" alt="Microlens" className="h-32 w-auto object-contain" />
-        <p className="text-gray-500 text-base mt-3 leading-relaxed">
-          누구에게 묻기 힘든 미세한 부분까지,<br />
-          일상의 사소한 불편을 해결해주는 시력보조 파트너
-        </p>
+    <div className="min-h-screen bg-slate-100 flex flex-col">
+      <header className="bg-white/90 backdrop-blur-sm border-b border-slate-200 py-8 px-6 md:px-10 sticky top-0 z-10 shadow-sm">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-4">
+          <img src="/microlens_logo.png" alt="Microlens" className="h-40 w-auto object-contain rounded-lg shadow-sm" />
+          <div>
+            <h1 className="text-3xl md:text-4xl font-semibold text-slate-900">Microlens</h1>
+            <p className="text-sm md:text-base text-slate-600 mt-1">일상의 사소한 불편을 해결해주는 시력보조 파트너</p>
+          </div>
+        </div>
+
       </header>
 
       <main className="flex-1 flex flex-col gap-4 px-6 pb-10">
