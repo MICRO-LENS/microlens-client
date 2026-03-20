@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" shape-rendering="crispEdges">
+  <defs>
+    <!-- Background gradient: white to very light pastel blue -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d6eaff"/>
+    </linearGradient>
+
+    <!-- Lens radial gradient: bright sky-blue to deep navy -->
+    <radialGradient id="lens" cx="38%" cy="33%" r="68%" fx="38%" fy="33%">
+      <stop offset="0%"   stop-color="#70c2ff"/>
+      <stop offset="55%"  stop-color="#1a78e8"/>
+      <stop offset="100%" stop-color="#073592"/>
+    </radialGradient>
+
+    <!-- Pupil gradient: dark center for depth -->
+    <radialGradient id="pupil" cx="45%" cy="40%" r="60%">
+      <stop offset="0%"   stop-color="#1050b0"/>
+      <stop offset="100%" stop-color="#020d24"/>
+    </radialGradient>
+
+    <!-- Soft glow for the micro-light spark -->
+    <filter id="spark" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ① Rounded-square background -->
+  <rect width="32" height="32" rx="7" ry="7" fill="url(#bg)"/>
+
+  <!-- ② Outer lens body — main filled circle -->
+  <circle cx="16" cy="16" r="12" fill="url(#lens)"/>
+
+  <!-- ③ Lens barrel edge (thin stroke for definition) -->
+  <circle cx="16" cy="16" r="12" fill="none"
+          stroke="#0a4ab8" stroke-width="0.6" opacity="0.55"/>
+
+  <!-- ④ Mid glass ring — subtle inner element -->
+  <circle cx="16" cy="16" r="7.8" fill="none"
+          stroke="rgba(255,255,255,0.30)" stroke-width="1.5"/>
+
+  <!-- ⑤ Inner aperture ring -->
+  <circle cx="16" cy="16" r="5" fill="none"
+          stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+
+  <!-- ⑥ Pupil / focal dark center -->
+  <circle cx="16" cy="16" r="3.6" fill="url(#pupil)"/>
+
+  <!-- ⑦ Central glint — large soft highlight on lens glass -->
+  <ellipse cx="12.2" cy="11.8" rx="3.0" ry="2.0"
+           fill="white" opacity="0.65"
+           transform="rotate(-40 12.2 11.8)"/>
+
+  <!-- ⑧ Micro-light spark — tiny bright point (the "micro" in microlens) -->
+  <circle cx="21.5" cy="10.5" r="1.6" fill="white" opacity="0.97"
+          filter="url(#spark)"/>
+</svg>

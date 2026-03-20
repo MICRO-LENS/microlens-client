@@ -61,15 +61,11 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-100 flex flex-col">
-      <header className="bg-white/90 backdrop-blur-sm border-b border-slate-200 py-8 px-6 md:px-10 sticky top-0 z-10 shadow-sm">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-4">
-          <img src="/microlens_logo.png" alt="Microlens" className="h-40 w-auto object-contain rounded-lg shadow-sm" />
-          <div>
-            <h1 className="text-3xl md:text-4xl font-semibold text-slate-900">Microlens</h1>
-            <p className="text-sm md:text-base text-slate-600 mt-1">일상의 사소한 불편을 해결해주는 시력보조 파트너</p>
-          </div>
+      <header className="bg-white border-b border-slate-100 px-6 md:px-10 py-12 sticky top-0 z-10">
+        <div className="max-w-2xl mx-auto flex items-center justify-between gap-4">
+          <img src="/microlens_logo.svg" alt="Microlens" className="h-[84px] w-auto object-contain" />
+          <p className="text-xl text-slate-700 font-semibold hidden sm:block break-keep text-right">일상의 사소한 불편을 해결해주는 시력보조 파트너</p>
         </div>
-
       </header>
 
       <main className="flex-1 flex flex-col gap-4 px-6 pb-10">

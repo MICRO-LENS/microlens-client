@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 52" width="228" height="52" role="img" aria-label="microlens logo">
+  <defs>
+    <!-- favicon 디자인 그대로 — 좌표만 ×1.625 스케일업 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d6eaff"/>
+    </linearGradient>
+
+    <radialGradient id="lens" cx="38%" cy="33%" r="68%" fx="38%" fy="33%">
+      <stop offset="0%"   stop-color="#70c2ff"/>
+      <stop offset="55%"  stop-color="#1a78e8"/>
+      <stop offset="100%" stop-color="#073592"/>
+    </radialGradient>
+
+    <radialGradient id="pupil" cx="45%" cy="40%" r="60%">
+      <stop offset="0%"   stop-color="#1050b0"/>
+      <stop offset="100%" stop-color="#020d24"/>
+    </radialGradient>
+
+    <filter id="spark" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ── Symbol (favicon ×1.625) ── -->
+
+  <!-- ① 둥근 사각형 배경 -->
+  <rect width="52" height="52" rx="11" ry="11" fill="url(#bg)"/>
+
+  <!-- ② 렌즈 바디 -->
+  <circle cx="26" cy="26" r="19.5" fill="url(#lens)"/>
+
+  <!-- ③ 배럴 엣지 -->
+  <circle cx="26" cy="26" r="19.5" fill="none"
+          stroke="#0a4ab8" stroke-width="1" opacity="0.55"/>
+
+  <!-- ④ 미드 글라스 링 -->
+  <circle cx="26" cy="26" r="12.7" fill="none"
+          stroke="rgba(255,255,255,0.30)" stroke-width="2.4"/>
+
+  <!-- ⑤ 이너 조리개 링 -->
+  <circle cx="26" cy="26" r="8.1" fill="none"
+          stroke="rgba(255,255,255,0.18)" stroke-width="1.6"/>
+
+  <!-- ⑥ 동공 -->
+  <circle cx="26" cy="26" r="5.9" fill="url(#pupil)"/>
+
+  <!-- ⑦ 메인 글린트 (렌즈 반사) -->
+  <ellipse cx="19.8" cy="19.2" rx="4.9" ry="3.3"
+           fill="white" opacity="0.65"
+           transform="rotate(-40 19.8 19.2)"/>
+
+  <!-- ⑧ 마이크로 라이트 스파크 -->
+  <circle cx="34.9" cy="17.1" r="2.6" fill="white" opacity="0.97"
+          filter="url(#spark)"/>
+
+  <!-- ── Logotype ── -->
+  <text
+    x="66" y="26"
+    dominant-baseline="middle"
+    font-family="'SF Pro Display','Inter','Helvetica Neue',Helvetica,Arial,sans-serif"
+    font-weight="700"
+    font-size="28"
+    letter-spacing="-0.5"
+    fill="#0f172a"
+  >microlens</text>
+</svg>
