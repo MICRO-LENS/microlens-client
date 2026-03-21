@@ -14,9 +14,9 @@ const CONFIG = {
   detect: {
     endpoint: '/stain/detect' as const,
     label: '의류 얼룩 탐지',
-    description: '옷에 얼룩이 있는 위치를 찾아드립니다',
+    description: '옷에 얼룩이 있는지 찾아드립니다',
     buttonColor: 'bg-orange-500 hover:bg-orange-600 focus:ring-orange-400',
-    actionLabel: '얼룩 위치 찾기',
+    actionLabel: '옷 얼룩 존재 확인',
   },
   classify: {
     endpoint: '/stain/classify' as const,
