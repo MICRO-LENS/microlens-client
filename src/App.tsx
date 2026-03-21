@@ -9,7 +9,7 @@ const HOME_BUTTONS: { view: View; label: string; description: string; color: str
   {
     view: 'stain-detect',
     label: '의류 얼룩 탐지',
-    description: '옷에 얼룩이 있는 위치를 찾아드립니다',
+    description: '옷에 얼룩이 있는지 찾아드립니다',
     color: 'bg-orange-500 hover:bg-orange-600 focus:ring-orange-400',
   },
   {
