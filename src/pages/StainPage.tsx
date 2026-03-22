@@ -4,6 +4,7 @@ import ResultCanvas from '../components/ResultCanvas';
 import DetectionResult from '../components/DetectionResult';
 import { analyzeImage } from '../lib/api';
 import type { Detection } from '../lib/api';
+import StainRemovalGuide from '../components/StainRemovalGuide';
 
 interface StainPageProps {
   mode: 'detect' | 'classify';
@@ -94,6 +95,22 @@ export default function StainPage({ mode, onBack }: StainPageProps) {
           </button>
         )}
 
+        {loading && (
+          <div
+            role="status"
+            aria-live="polite"
+            aria-label="이미지를 분석하고 있습니다. 잠시 기다려주세요."
+            className="flex flex-col items-center justify-center gap-4 py-10"
+          >
+            <div
+              aria-hidden="true"
+              className="w-14 h-14 rounded-full border-4 border-gray-700 border-t-white animate-spin"
+            />
+            <p className="text-white text-2xl font-bold tracking-wide">로딩중..</p>
+            <p className="text-gray-400 text-base">분석 결과를 가져오고 있습니다.</p>
+          </div>
+        )}
+
         {error && (
           <div
             role="alert"
@@ -107,6 +124,7 @@ export default function StainPage({ mode, onBack }: StainPageProps) {
           <div className="space-y-4">
             <ResultCanvas imageUrl={previewUrl} detections={detections} />
             <DetectionResult detections={detections} inferenceTimeMs={inferenceTimeMs} />
+            {mode === 'classify' && <StainRemovalGuide detections={detections} />}
           </div>
         )}
       </main>
