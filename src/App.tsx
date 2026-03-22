@@ -9,25 +9,25 @@ const HOME_BUTTONS: { view: View; label: string; description: string; color: str
   {
     view: 'stain-detect',
     label: '의류 얼룩 탐지',
-    description: '옷에 얼룩이 있는지 찾아드립니다',
+    description: '옷에 얼룩이 있는지 확인해드립니다.',
     color: 'bg-orange-500 hover:bg-orange-600 focus:ring-orange-400',
   },
   {
     view: 'stain-classify',
     label: '의류 얼룩 분류',
-    description: '얼룩의 종류를 알려드립니다 (음료 / 음식 / 펜)',
+    description: '얼룩의 종류와 지우는 방법 알려드립니다.',
     color: 'bg-purple-600 hover:bg-purple-700 focus:ring-purple-400',
   },
   {
     view: 'teeth',
     label: '치아 이물질 탐지',
-    description: '치아에 낀 이물질을 찾아드립니다',
+    description: '치아에 이물질 있는지 확인해드립니다.',
     color: 'bg-teal-600 hover:bg-teal-700 focus:ring-teal-400',
   },
   {
     view: 'contact',
     label: '개발자에게 메일 쓰기',
-    description: '새로운 기능이나 불편함을 알려주세요',
+    description: '일상에서 불편한 점이나 만들어줬으면 하는 기능을 알려주세요',
     color: 'bg-gray-700 hover:bg-gray-800 focus:ring-gray-500',
   },
 ];
@@ -64,7 +64,7 @@ export default function App() {
       <header className="bg-white border-b border-slate-100 px-6 md:px-10 py-12 sticky top-0 z-10">
         <div className="max-w-2xl mx-auto flex items-center justify-between gap-4">
           <img src="/microlens_logo.svg" alt="Microlens" className="h-[84px] w-auto object-contain" />
-          <p className="text-xl text-slate-700 font-semibold hidden sm:block break-keep text-right">일상의 사소한 불편을 해결해주는 시력보조 파트너</p>
+          <p className="text-xl text-slate-700 font-semibold hidden sm:block break-keep text-right">일상의 미세한 문제를 확인해주는 시력보조 파트너</p>
         </div>
       </header>
 

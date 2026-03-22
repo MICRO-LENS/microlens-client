@@ -7,17 +7,17 @@ interface StainInfo {
 }
 
 const STAIN_GUIDE: Record<string, StainInfo> = {
-  'coffee&beverage': {
-    koreanName: '음료 얼룩',
+  beverage: {
+    koreanName: '수용성 얼룩',
     description: '물기가 많이 섞인 연한 얼룩입니다.',
     removalMethod:
-      '식초로 적신후 베이킹 소다로 세탁해주세요.',
+      '식초로 적신후 찬물로 세탁해주세요.',
   },
-  'kimchi&food': {
-    koreanName: '음식 얼룩',
-    description: '붉은 계열의 진한 얼룩입니다.',
+  food: {
+    koreanName: '지용성 얼룩',
+    description: '음식 얼룩과 같은 진한 얼룩입니다.',
     removalMethod:
-      '주방세제와 찬물로 닦아내세요',
+      '주방세제와 미지근한 물로 세탁해주세요',
   },
   pen: {
     koreanName: '볼펜 얼룩',
@@ -31,7 +31,7 @@ const FALLBACK_GUIDE: StainInfo = {
   koreanName: '알 수 없는 얼룩',
   description: '얼룩 종류를 특정하기 어렵습니다.',
   removalMethod:
-    '중성세제를 이용해 찬물로 부드럽게 손세탁 후, 세탁 전문가 또는 세탁소에 문의해 보세요.',
+    '중성세제를 이용해 찬물로 부드럽게 손세탁 후, 세탁소에 문의해 보세요.',
 };
 
 interface StainRemovalGuideProps {

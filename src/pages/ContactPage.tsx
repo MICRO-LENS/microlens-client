@@ -39,7 +39,7 @@ export default function ContactPage({ onBack }: ContactPageProps) {
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="예) 냉장고 유통기한을 카메라로 찍으면 알려주는 기능이 있으면 좋겠어요."
+          placeholder="예) 화장이 잘되었는지 카메라로 찍으면 알려주는 기능이 있으면 좋겠어요."
           aria-label="개발자에게 보낼 메시지를 입력하세요"
           rows={8}
           className="

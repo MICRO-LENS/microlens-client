@@ -51,7 +51,7 @@ export default function TeethPage({ onBack }: TeethPageProps) {
         </button>
         <div>
           <h1 className="text-3xl font-extrabold text-white">치아 이물질 탐지</h1>
-          <p className="text-gray-400 text-base mt-1">치아에 낀 이물질을 찾아드립니다</p>
+          <p className="text-gray-400 text-base mt-1">치아에 이물질이 있는지 확인해드립니다</p>
         </div>
       </header>
 
