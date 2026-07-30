@@ -13,7 +13,7 @@
 ![nginx](https://img.shields.io/badge/nginx-009639?style=flat&logo=nginx&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 
-🌐 **서비스**: [microlens.cloud](https://microlens.cloud/) · 📹 **시연 영상**: [YouTube](https://youtu.be/7jnekg9lZeo)
+📹 **시연 영상**: [YouTube](https://youtu.be/7jnekg9lZeo)
 
 [![MicroLens 시연 영상](https://img.youtube.com/vi/7jnekg9lZeo/0.jpg)](https://youtu.be/7jnekg9lZeo)
 
